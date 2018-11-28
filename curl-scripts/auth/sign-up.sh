@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# EMAIL="red@blue.com" PASSWORD="pokemon" sh curl-scripts/auth/sign-up.sh
+# EMAIL="ash@123.com" PASSWORD="pokemon" sh curl-scripts/auth/sign-up.sh
 
 curl "http://localhost:4741/sign-up" \
   --include \

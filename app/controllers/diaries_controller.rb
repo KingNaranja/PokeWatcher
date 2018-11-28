@@ -1,4 +1,4 @@
-class DiariesController < ApplicationController
+class DiariesController < ProtectedController
   before_action :set_diary, only: %i[show update destroy]
 
   # GET /diaries
@@ -13,9 +13,15 @@ class DiariesController < ApplicationController
     render json: @diary
   end
 
+  def new
+    @diary = current_user.diaries.build
+  end
+
   # POST /diaries
   def create
-    @diary = Diary.new(diary_params)
+    # @diary = Diary.new(diary_params)
+    # binding.pry
+    @diary = current_user.diaries.build(diary_params)
 
     if @diary.save
       render json: @diary, status: :created, location: @diary
