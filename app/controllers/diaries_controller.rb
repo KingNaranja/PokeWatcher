@@ -1,15 +1,34 @@
 class DiariesController < ProtectedController
   before_action :set_diary, only: %i[show update destroy]
+  require 'date'
 
   # GET /diaries
   def index
+    
+    @diaries = Diary.all 
+    render json: @diaries
+    
+  end
+
+  # get today's diary entry
+  def showToday
+    today = Date.today
     @diaries = Diary.all
 
-    render json: @diaries
+    # find entries that are created today
+    todays_diary = Diary.all.select {|entry| entry.date == today}
+    if todays_diary
+        render json: todays_diary
+    else
+        render json: todays_diary.errors
+    end
+    
+
   end
 
   # GET /diaries/1
   def show
+    # @diary = Diary.where(date=Date.today)
     render json: @diary
   end
 
@@ -20,7 +39,6 @@ class DiariesController < ProtectedController
   # POST /diaries
   def create
     # @diary = Diary.new(diary_params)
-    # binding.pry
     @diary = current_user.diaries.build(diary_params)
 
     if @diary.save
@@ -32,6 +50,9 @@ class DiariesController < ProtectedController
 
   # PATCH/PUT /diaries/1
   def update
+
+    @diary = current_user.diaries
+
     if @diary.update(diary_params)
       render json: @diary
     else
@@ -41,6 +62,7 @@ class DiariesController < ProtectedController
 
   # DELETE /diaries/1
   def destroy
+    @diary = current_user.diaries
     @diary.destroy
   end
 
