@@ -5,7 +5,8 @@ class DiariesController < ProtectedController
   # GET /diaries
   def index
     
-    @diaries = Diary.all 
+    # @diaries = Diary.all 
+    @diaries = current_user.diaries.all
     render json: @diaries
     
   end
@@ -16,7 +17,7 @@ class DiariesController < ProtectedController
     @diaries = Diary.all
 
     # find entries that are created today
-    todays_diary = Diary.all.select {|entry| entry.date == today}
+    todays_diary = current_user.diaries.all.select {|entry| entry.date == today}
     if todays_diary
         render json: todays_diary
     else
