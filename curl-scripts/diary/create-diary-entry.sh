@@ -1,4 +1,4 @@
-#TOKEN='BAhJIiUwYzFkZjI4YzU4MDVhM2RkNjgwMGJhYzM4NjhkMDQzNgY6BkVG--55bd37991f401498d3fcec28e04652925709f64f' DATE='2018-11-29' NOTE='caught an abra this morning!' sh curl-scripts/diary/create-diary-entry.sh
+#TOKEN='BAhJIiUyYzBhYjgyZDMxZTNmMjhmZjIwNGU2MTFlYWZjZTZiZAY6BkVG--1e3fad50089d6815084a7cf54deb916d63375fc7' DATE='2018-11-30' NOTE='I ran into Lugia today!' sh curl-scripts/diary/create-diary-entry.sh
 
 curl "http://localhost:4741/diaries" \
   --include \
