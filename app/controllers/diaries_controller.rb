@@ -63,7 +63,7 @@ class DiariesController < ProtectedController
 
   # DELETE /diaries/1
   def destroy
-    @diary = current_user.diaries
+    # @diary = current_user.diaries
     @diary.destroy
   end
 

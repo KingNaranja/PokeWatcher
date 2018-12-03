@@ -1,4 +1,4 @@
-#  TOKEN='BAhJIiU2NTUwZGUwM2U5N2VmYjhmOTFjNWMyYTVhNDE5MDM2OAY6BkVG--b0573e255c2155ace638e2c0cdcc0c0acc9f35dd' ID=3 sh curl-scripts/diary/destroy-diary.sh
+#  TOKEN='BAhJIiVkYzMzYzkzZWM1Yzc4ZDM0MDIwYzExMTQyODJjODg1YQY6BkVG--cd20f96e47db9fb925d185009eb61619c6b9ff74' ID=3 sh curl-scripts/diary/destroy-diary.sh
 
 
 curl --include --request DELETE "http://localhost:4741/diaries/${ID}" \
