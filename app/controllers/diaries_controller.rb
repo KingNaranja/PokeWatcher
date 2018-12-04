@@ -65,6 +65,8 @@ class DiariesController < ProtectedController
   def destroy
     # @diary = current_user.diaries
     @diary.destroy
+
+    render json: current_user.diaries
   end
 
   private
