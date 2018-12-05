@@ -43,7 +43,7 @@ class DiariesController < ProtectedController
     @diary = current_user.diaries.build(diary_params)
 
     if @diary.save
-      render json: @diary, status: :created, location: @diary
+      render json: current_user.diaries, status: :created, location: @diary
     else
       render json: @diary.errors, status: :unprocessable_entity
     end
