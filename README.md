@@ -7,6 +7,13 @@ https://poke-watcher.herokuapp.com/
 The pokewatcher server allows users to CRUD diary entries, search and find information on 
 legendary pokemon, and manages your relationship with those Pokémon.
 
+### Technologies Used
+
+Ruby 
+RubyonRails MVC
+PostgreSQL 
+Heroku
+
 ### ERD
 
 *ERD Documentation can be viewed from Imgur*
