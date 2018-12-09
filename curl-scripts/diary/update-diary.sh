@@ -1,4 +1,4 @@
-# TOKEN='BAhJIiU3ZDk4YjgwYWYzMjRlNTE2MmQxZGU0ZDUyNDA5MzgyNQY6BkVG--0cbeb2ae62bed01b4e07d4886867085a6096080a' ID=1 DATE='2018-11-05' NOTE='found an abra, it ran away' sh curl-scripts/diary/update-diary.sh
+# TOKEN='BAhJIiVmMzYwYWUzMWIyODg1MjY3ODM5ZTFlYjRhMTFlNWFlMgY6BkVG--59a3baa8916d3df14d3ff5c7f382b211e806ae81' ID=91 DATE='2018-05-05' NOTE='I AM A MAGIC WIZARD' sh curl-scripts/diary/update-diary.sh
 
 curl --include --request PATCH "http://localhost:4741/diaries/${ID}" \
 --header "Content-Type: application/json" \
